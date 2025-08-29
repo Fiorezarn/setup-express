@@ -1,7 +1,7 @@
-const { welcomeApi } = require('@/controllers/main.controller');
 const express = require('express');
 const router = express.Router();
+const mainRouter = require('@/routers/main.route');
 
-router.get('/', welcomeApi);
+router.use('/welcome', mainRouter);
 
 module.exports = router;
